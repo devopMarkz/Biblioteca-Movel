@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: library-system
+
+  jpa:
+    open-in-view: false
+
+  profiles:
+    active: test
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
