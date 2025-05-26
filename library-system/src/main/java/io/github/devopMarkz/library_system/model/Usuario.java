@@ -31,15 +31,28 @@ public class Usuario implements UserDetails {
     @Column(name = "perfil")
     private Perfil perfil;
 
+    @ManyToOne
+    @JoinColumn(name = "escola_id")
+    private Escola escola;
+
     public Usuario() {
     }
 
-    public Usuario(Long id, String email, String senha, String nome, Perfil perfil) {
+    public Usuario(String email, String senha, String nome, Perfil perfil, Escola escola) {
+        this.email = email;
+        this.senha = senha;
+        this.nome = nome;
+        this.perfil = perfil;
+        this.escola = escola;
+    }
+
+    public Usuario(Long id, String email, String senha, String nome, Perfil perfil, Escola escola) {
         this.id = id;
         this.email = email;
         this.senha = senha;
         this.nome = nome;
         this.perfil = perfil;
+        this.escola = escola;
     }
 
     @Override
@@ -115,6 +128,14 @@ public class Usuario implements UserDetails {
 
     public void setPerfil(Perfil perfil) {
         this.perfil = perfil;
+    }
+
+    public Escola getEscola() {
+        return escola;
+    }
+
+    public void setEscola(Escola escola) {
+        this.escola = escola;
     }
 
     @Override

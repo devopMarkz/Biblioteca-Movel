@@ -2,13 +2,10 @@ package io.github.devopMarkz.library_system.model;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "tb_enderecos")
-public class Endereco {
+import java.util.Objects;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@Embeddable
+public class Endereco {
 
     @Column(name = "cep")
     private String cep;
@@ -34,6 +31,11 @@ public class Endereco {
     public Endereco() {
     }
 
+    public Endereco(String cep, String numero) {
+        this.cep = cep;
+        this.numero = numero;
+    }
+
     public Endereco(String cep, String logradouro, String numero, String bairro, String localidade, String uf, String estado) {
         this.cep = cep;
         this.logradouro = logradouro;
@@ -42,25 +44,6 @@ public class Endereco {
         this.localidade = localidade;
         this.uf = uf;
         this.estado = estado;
-    }
-
-    public Endereco(Long id, String cep, String logradouro, String numero, String bairro, String localidade, String uf, String estado) {
-        this.id = id;
-        this.cep = cep;
-        this.logradouro = logradouro;
-        this.numero = numero;
-        this.bairro = bairro;
-        this.localidade = localidade;
-        this.uf = uf;
-        this.estado = estado;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getCep() {
@@ -117,5 +100,17 @@ public class Endereco {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Endereco endereco = (Endereco) o;
+        return Objects.equals(cep, endereco.cep) && Objects.equals(logradouro, endereco.logradouro) && Objects.equals(numero, endereco.numero) && Objects.equals(bairro, endereco.bairro) && Objects.equals(localidade, endereco.localidade) && Objects.equals(uf, endereco.uf) && Objects.equals(estado, endereco.estado);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cep, logradouro, numero, bairro, localidade, uf, estado);
     }
 }
