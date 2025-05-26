@@ -1,10 +1,8 @@
 package io.github.devopMarkz.library_system.controllers;
 
 import io.github.devopMarkz.library_system.dtos.LoginDTO;
-import io.github.devopMarkz.library_system.model.Usuario;
 import io.github.devopMarkz.library_system.services.TokenService;
 import io.github.devopMarkz.library_system.services.UsuarioService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
