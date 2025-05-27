@@ -1,7 +1,7 @@
 package io.github.devopMarkz.library_system.services;
 
-import io.github.devopMarkz.library_system.dtos.UsuarioCreateDTO;
-import io.github.devopMarkz.library_system.dtos.UsuarioResponseDTO;
+import io.github.devopMarkz.library_system.dtos.usuario.UsuarioCreateDTO;
+import io.github.devopMarkz.library_system.dtos.usuario.UsuarioResponseDTO;
 import io.github.devopMarkz.library_system.model.Escola;
 import io.github.devopMarkz.library_system.model.Usuario;
 import io.github.devopMarkz.library_system.repositories.EscolaRepository;

@@ -1,4 +1,4 @@
-package io.github.devopMarkz.library_system.dtos;
+package io.github.devopMarkz.library_system.dtos.usuario;
 
 import io.github.devopMarkz.library_system.model.enums.Perfil;
 import jakarta.validation.constraints.NotBlank;

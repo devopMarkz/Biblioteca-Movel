@@ -1,4 +1,4 @@
-package io.github.devopMarkz.library_system.dtos;
+package io.github.devopMarkz.library_system.dtos.endereco;
 
 public record EnderecoDTO(
         String cep,

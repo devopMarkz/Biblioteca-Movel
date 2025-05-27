@@ -34,7 +34,7 @@ public class TokenService {
                     .withIssuer("Biblioteca API")
                     .withSubject(usuario.getEmail())
                     .withClaim("Role", usuario.getPerfil().name())
-                    .withExpiresAt(Instant.now().plus(8L, ChronoUnit.HOURS))
+                    .withExpiresAt(Instant.now().plus(72L, ChronoUnit.HOURS))
                     .sign(algorithm);
         } catch (JWTCreationException e){
             throw new JWTCreationException("Erro ao tentar gerar token.", e);

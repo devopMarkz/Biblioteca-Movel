@@ -1,4 +1,4 @@
-package io.github.devopMarkz.library_system.dtos;
+package io.github.devopMarkz.library_system.dtos.usuario;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

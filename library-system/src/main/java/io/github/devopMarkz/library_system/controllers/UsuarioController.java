@@ -1,7 +1,7 @@
 package io.github.devopMarkz.library_system.controllers;
 
-import io.github.devopMarkz.library_system.dtos.UsuarioCreateDTO;
-import io.github.devopMarkz.library_system.dtos.UsuarioResponseDTO;
+import io.github.devopMarkz.library_system.dtos.usuario.UsuarioCreateDTO;
+import io.github.devopMarkz.library_system.dtos.usuario.UsuarioResponseDTO;
 import io.github.devopMarkz.library_system.services.UsuarioService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
